@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><title>N00K image recovery</title>
+<style>body{background:#0c091c;color:#dec6ff;font-family:system-ui;margin:2rem}img{max-width:420px;display:block;margin:.5rem 0 1.5rem}</style>
+<h1>N00K image recovery</h1><p>Photos recovered from the old N00K's cache. The in-world console reads <code>manifest.json</code>.</p>
+<div id=g></div><script>fetch('manifest.json').then(r=>r.json()).then(m=>{g.innerHTML=m.items.map(i=>`<figure><img src="${i.file}" loading=lazy><figcaption>${i.caption} - ${i.by}, ${i.when}</figcaption></figure>`).join('')})</script>
